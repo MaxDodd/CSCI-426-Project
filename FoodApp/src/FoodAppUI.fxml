@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <AnchorPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane style="-fx-background-color: white;">
+                     <children>
+                        <VBox prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="TagOneButton" mnemonicParsing="false" text="Tag 1">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                                    <VBox>
+                                       <children>
+                                          <Label text="Meal name">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Short Description">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                                    <VBox>
+                                       <children>
+                                          <Label text="Meal name">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Short Description">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="254.0" layoutY="142.0" prefHeight="516.0" prefWidth="693.0">
+               <children>
+                  <VBox layoutX="240.0" layoutY="189.0" prefHeight="516.0" prefWidth="693.0" style="-fx-background-color: green;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="268.0" fitWidth="695.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="This is where the description of the meal will go. Details like cook time, ingrediants, tools" wrapText="true" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="RequiredLessonOne" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button fx:id="MealPopUpBackButton" mnemonicParsing="false" text="Back" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="Tabs" layoutX="-1.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="TabLesson" text="Lessons">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="565.0">
+                     <children>
+                        <GridPane prefHeight="772.0" prefWidth="1200.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Pane maxHeight="150.0" maxWidth="150.0" prefHeight="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Button fx:id="FoodTypesLessonButton" layoutX="37.0" layoutY="50.0" mnemonicParsing="false" text="Food Types" />
+                                    <Label layoutX="45.0" layoutY="87.0" text="Food Types" />
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </Pane>
+                              <Pane maxHeight="150.0" maxWidth="150.0" prefHeight="150.0" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label layoutX="27.0" layoutY="90.0" text="Grocery Shopping" />
+                                    <Button fx:id="GroceryLessonButton" layoutX="19.0" layoutY="50.0" mnemonicParsing="false" text="Grocery Shopping" />
+                                 </children>
+                              </Pane>
+                              <Pane maxHeight="150.0" maxWidth="150.0" prefHeight="150.0" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label layoutX="40.0" layoutY="90.0" text="Tools &amp; Skills" />
+                                    <Button fx:id="ToolsLessonButton" layoutX="32.0" layoutY="50.0" mnemonicParsing="false" text="Tools &amp; Skills" />
+                                 </children>
+                              </Pane>
+                              <Pane maxHeight="150.0" maxWidth="150.0" prefHeight="150.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <children>
+                                    <Label layoutX="57.0" layoutY="86.0" text="Flavors" />
+                                    <Button fx:id="GroceryLessonButton111" layoutX="49.0" layoutY="50.0" mnemonicParsing="false" text="Flavors" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Groceries">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TilePane layoutX="379.0" layoutY="186.0" prefHeight="771.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="150.0" prefWidth="150.0">
+                                 <children>
+                                    <Button fx:id="CreateTemplateButton" layoutX="29.0" layoutY="50.0" mnemonicParsing="false" text="New Template" />
+                                    <Label fx:id="TemplateLabelOne" layoutX="46.0" layoutY="91.0" text="Template 1" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="150.0" prefWidth="150.0">
+                                 <children>
+                                    <Button fx:id="TemplateButtonTwo" layoutX="37.0" layoutY="50.0" mnemonicParsing="false" text="Template 1" />
+                                    <Label fx:id="TemplateLabelTwo" layoutX="45.0" layoutY="92.0" text="Template 1" />
+                                 </children>
+                              </AnchorPane>
+                           </children></TilePane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="TabInspiration" text="Inspiration">
+               <content>
+                  <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="771.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label text="What Are You Looking For?">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <TilePane alignment="TOP_CENTER" hgap="20.0" prefHeight="148.0" prefWidth="480.0" vgap="20.0">
+                                       <children>
+                                          <CheckBox mnemonicParsing="false" text="Quick">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox mnemonicParsing="false" text="Breakfast">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox mnemonicParsing="false" text="Lunch">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox mnemonicParsing="false" text="Dinner">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </CheckBox>
+                                          <CheckBox mnemonicParsing="false" text="Snack">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </CheckBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="50.0" top="50.0" />
+                                       </padding>
+                                    </TilePane>
+                                    <Label text="Includes...">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <Accordion prefWidth="650.0">
+                                       <panes>
+                                          <TitledPane animated="false" text="Proteins">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                   <children>
+                                                      <TilePane hgap="20.0" layoutX="14.0" layoutY="-35.0" prefHeight="130.0" prefWidth="478.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" text="Beef">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Chicken">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Eggs">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Fish">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Pork">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Turkey">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                         </children>
+                                                      </TilePane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Vegetables">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                   <children>
+                                                      <TilePane hgap="20.0" prefHeight="180.0" prefWidth="648.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" text="Broccoli">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Carrots">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Corn">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Lettuce">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Mushrooms">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Peas">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Spinach">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                            <CheckBox mnemonicParsing="false" text="Tomato">
+                                                               <font>
+                                                                  <Font size="20.0" />
+                                                               </font>
+                                                            </CheckBox>
+                                                         </children>
+                                                      </TilePane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TitledPane>
+                                          <TitledPane animated="false" prefHeight="206.0" prefWidth="316.0" text="Grains">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Dairy">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TitledPane>
+                                          <TitledPane animated="false" text="Spices">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <Button mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
