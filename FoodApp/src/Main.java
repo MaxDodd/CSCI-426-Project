@@ -9,8 +9,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("FoodAppUI.fxml"));
-        primaryStage.setScene(new Scene(root));
+        Scene home = new Scene(root);
+
+        home.getStylesheets().add(getClass().getResource("FoodAppStyleSheet.css").toExternalForm());
+
+        primaryStage.setScene(home);
         primaryStage.show();
+
 
 
     }

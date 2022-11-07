@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url(Fonts/Ubuntu-Bold.ttf)
+}
+
+.root{
+    -fx-font-family: Ubuntu;
+}
+

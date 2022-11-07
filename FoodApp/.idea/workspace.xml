@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FoodAppStyleSheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Add-Template.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Add-Template.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Flavors.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Flavors.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Food Types.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Groceries.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Groceries.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Paper Prototype.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Paper Prototype.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/Add-Template.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/Add-Template.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/Flavors.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/Flavors.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/Food Types.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/Food Types.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/Groceries.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/Groceries.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/Template.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/Template.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/Tools&amp;Skills.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/Tools&amp;Skills.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/X.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/X.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/arrow-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/arrow-left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SVG/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/SVG/search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Template.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Template.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Tools&amp;Skills.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/Tools&amp;Skills.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/X.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/X.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FoodApp/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FoodApp/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FoodApp/FoodAppUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FoodApp/FoodAppUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FoodApp/META-INF/FoodApp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FoodAppUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FoodAppUI.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Paper Prototype.png" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,8 +92,12 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="2GVGJoO0uw86iCsayPsK5c1qMsb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -83,7 +116,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx-sdk-19" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -92,6 +125,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src" />
       <recent name="C:\Users\Maxwell Dodd\Documents\CSCI 426\FoodApp\src" />
       <recent name="C:\Users\Maxwell Dodd\Documents\CSCI 426\FoodApp\src\FXML" />
     </key>
@@ -209,6 +243,10 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-948" y="148" key="#Notifications" timestamp="1667844657498">
+      <screen x="-1080" y="-451" width="1080" height="1880" />
+    </state>
+    <state x="-948" y="148" key="#Notifications/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1667844657498" />
     <state x="434" y="279" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1666470835228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -222,26 +260,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="760" y="371" key="FileChooserDialogImpl/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666469694165" />
-    <state width="1037" height="246" key="GridCell.Tab.0.bottom" timestamp="1666826899684">
-      <screen x="-1080" y="-451" width="1080" height="1880" />
+    <state width="1877" height="246" key="GridCell.Tab.0.bottom" timestamp="1667850012183">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1037" height="246" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1666826899684" />
-    <state width="1860" height="246" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666471801200" />
-    <state width="1037" height="246" key="GridCell.Tab.0.center" timestamp="1666826899684">
-      <screen x="-1080" y="-451" width="1080" height="1880" />
+    <state width="1037" height="246" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1667847010019" />
+    <state width="1877" height="246" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
+    <state width="1877" height="246" key="GridCell.Tab.0.center" timestamp="1667850012183">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1037" height="246" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1666826899684" />
-    <state width="1860" height="246" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666471801200" />
-    <state width="1037" height="246" key="GridCell.Tab.0.left" timestamp="1666826899684">
-      <screen x="-1080" y="-451" width="1080" height="1880" />
+    <state width="1037" height="246" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1667847010019" />
+    <state width="1877" height="246" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
+    <state width="1877" height="246" key="GridCell.Tab.0.left" timestamp="1667850012183">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1037" height="246" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1666826899684" />
-    <state width="1860" height="246" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666471801200" />
-    <state width="1037" height="246" key="GridCell.Tab.0.right" timestamp="1666826899684">
-      <screen x="-1080" y="-451" width="1080" height="1880" />
+    <state width="1037" height="246" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1667847010019" />
+    <state width="1877" height="246" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
+    <state width="1877" height="246" key="GridCell.Tab.0.right" timestamp="1667850012183">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1037" height="246" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1666826899684" />
-    <state width="1860" height="246" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666471801200" />
+    <state width="1037" height="246" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1667847010019" />
+    <state width="1877" height="246" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
     <state width="1037" height="682" key="GridCell.Tab.1.bottom" timestamp="1666479289026">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
