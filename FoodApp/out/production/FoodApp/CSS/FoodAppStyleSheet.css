@@ -1,0 +1,12 @@
+@font-face{
+    font-family:'Roboto';
+    src: url ('Fonts/Roboto-Black.ttf')
+}
+
+.tabs {
+    -fx-font-size: 20px;
+    -fx-padding: 10px;
+    -fx-font-family: 'Roboto';
+}
+
+

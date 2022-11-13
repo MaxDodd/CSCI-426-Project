@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson>
+	<info>
+		<topic>Grocery Shopping and Meal Planning</topic>
+		<color>#F74672</color>
+	</info>
+	<pages>
+		<page>
+			<h1>Introduction</h1>
+			<img src="tbd"></img>
+			<p>
+				 Shopping for groceries is a task that often goes underestimated by first time chefs. However, what with so many options for what to make and what to buy, as well as supermarkets employing psychological hacks to influence your hungry mind, there is a lot to take into consideration here. Which items are the best value? Which items are scams? This lesson will cover everything you need to know about the part of the cooking process that happens before you even set foot in a kitchen, and hopefully help save you both precious time and money on your weekly shopping excursions.
+			</p>
+		</page>
+		<page module="Meal Planning">
+			<h1>Module 1: Meal Planning</h1>
+			<p>
+				One of, if not the most effective tip for saving money at the grocery store is knowing what you are going to get before you go. This simplifies your task, reduces the amount of time you spend in the store, and makes you less susceptible to marketing tactics that will try their best to get you to spend more on items you don't need.
+			</p>
+			<img src="tbd"></img>
+			<p>
+				In order to start planning meals, ask yourself the following questions:
+			</p>
+			<ul>
+				<li>How often am I going to prepare my own food?</li>
+				<li>How often am I going to cook large meals?</li>
+				<li>How often am I going to go shopping for groceries?</li>
+				<li>How much time am I willing to devote to meal prep?</li>
+			</ul>
+			<p>
+				Having solid ideas of your answers to these questions will help you estimate things like how many meals worth of food to get in a single trip to the store, and how much time you'll want to set aside per week for these endeavors.
+			</p>
+		</page>
+	</pages>
+</lesson>

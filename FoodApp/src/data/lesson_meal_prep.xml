@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson>
+	<info>
+		<topic>Food Preparation</topic>
+		<color>#F7c246</color>
+	</info>
+	<pages>
+		<page>
+			<h1>Introduction</h1>
+			<img src="tbd"></img>
+			<p>
+				 Cooking can be as simple or complex as you want it to be. If the kitchen intimidates you, start small and work your way up. This lesson covers as much as possible to help you along from fundamental techniques to the specifics of how to prepare some common ingredients.
+			</p>
+		</page>
+		<page module="Deciding Portions">
+			<h1>Module 1: Deciding Portions</h1>
+			<img src="tbd"></img>
+			<p>
+				Many of the decisions you have to make while cooking all sound something like "How much of this should I add?" This is also one of the areas where online recipes can easily fail you, so beware. In general, deciding ingredient portions will be an instinct that you develop with trial and error, but here are some tips to get you started on the right path.
+			</p>
+			<h2>For Main Ingredients</h2>
+			<p>
+				Eyeball it. Imagine how much of this ingredient you would wish to consume in a single serving, then multiply that by the number of servings you plan to make. There are a couple of additional things to consider here as well:
+			</p>
+			<ul>
+				<li>Will all of the ingredients fit in the dish you are using to cook them?</li>
+				<li>Dry foods like pasta or rice tend to expand drastically while cooking.</li>
+				<li>Fresh, leafy foods like cabbage tend to shrink drastically while cooking.</li>
+				<li>Fatty or Protein-rich foods like eggs tend to be deceptively filling for their size. (2-3 eggs is about enough for a whole omelete.)</li>
+			</ul>
+			<h2>For Sauces, Spices and Herbs</h2>
+			<p>
+				These are typically up to personal preference. Your sense of smell is your best guide for telling when you've added enough. If the food is close to done, your sense of taste will also help. Most herbs will be more flavorful the finer you chop them, as well as if they are dried as opposed to fresh. Crushed garlic is stronger than minced garlic, and garlic powder is stronger than both. (Ginger is an exception, it is much stronger when fresh.)
+			</p>
+			<h2>For Sweets and Baking</h2>
+			<p>
+				These are fields of cooking where precision is key. Baking, as well as many types of deserts fall more within the realm of chemistry than craft, so small changes in the ratios of ingredients can dramatically impact the end result. Pay close attention to directions and be more careful with measurements when making any kind of baked goods, candies, chocolates, custards, etc.
+			</p>
+			<h2>Putting it all together</h2>
+			<p>
+				Let's summarize with an example.
+			</p>
+			<p>
+				I am going to make a simple stir fry for me and 2 friends. I like to have leftovers so I am going to try to make around 5 servings worth of food. I will be adding chicken, brocolli, carrots, bell peppers, and onions, as well as some rice on the side.
+			</p>
+			<p>
+				Taking all of these ingredients into account, I figure I will be able to eat about 1/2 a crown of brocolli, 1/2 a carrot, 1/3 bell pepper, and 1/4 onion in one meal. From this, I decide to cut up 2 brocolli crowns, 3 carrots, 2 bell peppers, and 1 onion. As for the chicken, it comes in a 1 pound package which I figure is about enough, so I use the whole package.
+			</p>
+			<p>
+				For the rice, I know I will not be able to tell how much is enough just by looking because rice expands when it is cooked. Luckily, there is a measuring cup that comes with my rice cooker and I know 1 cup-full of rice is about enough for 2 servings, so I measure out 2 cups.
+			</p>
+			<p>
+				Finally, I'll be adding some soy sauce, chili paste, garlic, and ginger for flavor. I'm using fresh garlic so I chop up 3 whole cloves, since fresh garlic is not very strong. However, fresh ginger is quite strong, so I chop up just about half a teaspoon. When the stir fry is almost finished I drizzle in soy sauce until the smell and color is noticeable, but not overpowering, and I add a good 3 spoonfulls of chili paste since it is a large dish and I like spice.
+			</p>
+		</page>
+		<page module="Timing and Task Management">
+			<h1>Module 2: Timing and Task Management</h1>
+			<p>
+				One of the main challenges of cooking is figuring out when to do things and in what order.
+			</p>
+		</page>
+	</pages>
+</lesson>

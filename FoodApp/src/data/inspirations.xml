@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inspirations>
+	<tagGroups>
+		<category>
+			<name>Type of Meal</name>
+			<tag>breakfast</tag>
+			<tag>lunch</tag>
+			<tag>dinner</tag>
+			<tag>brunch</tag>
+			<tag>side-dish</tag>
+			<tag>snack</tag>
+			<tag>desert</tag>
+		</category>
+		<category>
+			<name>Convenience</name>
+			<tag>easy</tag>
+			<tag>quick</tag>
+			<tag>cheap</tag>
+			<tag>single-serving</tag>
+		</category>
+		<category>
+			<name>Dietary Restrictions</name>
+			<tag>vegetarian</tag>
+			<tag>vegan</tag>
+			<tag>gluten-free</tag>
+		</category>
+		<category>
+			<name>Needed Appliances</name>
+			<tag>stove</tag>
+			<tag>oven</tag>
+			<tag>grill</tag>
+		</category>
+	</tagGroups>
+	<foodlist>
+		<item>
+			<name>Ragu</name>
+			<desc>A classic pasta with meat sauce. Easy to make and very broadly appealing, it's the perfect dish for a family dinner. Store-bought pasta sauce works just fine here, but you can make your own if you want to go the extra mile.
+			Tips:
+			Add milk, parmesan cheese, and/or white wine vinegar to the sauce to improve flavor</desc>
+			<img></img>
+			<tags>
+				dinner easy stove
+			</tags>
+			<skills>
+				
+			</skills>
+		<item>
+		<item>
+			<name>Fried Rice</name>
+			<desc>A very versatile dish that you can make from nearly anything. Just sautee your choice of proteins and veggies and add rice, soy sauce, and scrambled egg.
+			Tips:
+			If adding chicken, go for chicken thighs as opposed to breast meat. Breast meat is more expensive and too dry for this style of cuisine.
+			Prepare the rice a day before cooking and let it dry out in the fridge. Fried rice is traditionally prepared as a way to salvage stale rice, and actually tastes better that way!</desc>
+			<img></img>
+			<tags>
+				dinner cheap stove vegetarian gluten-free
+			</tags>
+			<skills>
+				
+			</skills>
+		<item>
+		<item>
+			<name>Roast Potatoes</name>
+			<desc>A great side dish for any meal, but especially when there is a meaty main course. Leftovers also go great with eggs and cheese for breakfast. Chop your potatoes, roll them in oil and salt, then bake at high heat until they look golden!
+			Tips:
+			For crunchier potatoes, boil them briefly before baking, just enough that the surface starts to be mushy. You can even just microwave them if you're in a rush.
+			Add garlic and herbs toward the end of the baking time to improve the flavor. Adding them too early will just cause them to burn.</desc>
+			<img></img>
+			<tags>
+				side-dish easy cheap vegetarian vegan gluten-free oven
+			</tags>
+			<skills>
+				
+			</skills>
+		<item>
+		<item>
+			<name>Chicken Soup</name>
+			<desc>One of the most universal comfort foods there is. Just chicken, veggies, and optionally noodles all boiled in broth.
+			</desc>
+			<img></img>
+			<tags>
+				dinner easy quick cheap gluten-free stove
+			</tags>
+			<skills>
+				
+			</skills>
+		<item>
+		<item>
+			<name>Omelette</name>
+			<desc>A hearty breakfast that takes very little time to prepare.
+			Tips:
+			When adding cheese to an omelette, do it at the very end. If cheese is left to sit in heat for too long it will start to turn oily.
+			</desc>
+			<img></img>
+			<tags>
+				breakfast brunch easy quick cheap single-serving gluten-free vegetarian stove
+			</tags>
+			<skills>
+				
+			</skills>
+		<item>
+	</foodlist>
+</inspirations>

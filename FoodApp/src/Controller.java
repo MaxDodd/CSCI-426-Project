@@ -153,4 +153,10 @@ public class Controller {
         Tabs.toFront();
     }
 
+    public void setTemplateTitle(int index, String s){
+        if(index == 1){
+            GroceriesTemplateLabel.setText(s);
+        }
+    }
+
 }

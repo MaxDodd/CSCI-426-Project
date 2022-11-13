@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane id="base-anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <AnchorPane fx:id="MealInfoAnchorPane" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -161,9 +161,9 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <TabPane fx:id="Tabs" layoutX="-1.0" layoutY="-1.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="Tabs" layoutX="-1.0" layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@CSS/FoodAppStyleSheet.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab fx:id="TabLesson" text="Lessons">
+          <Tab fx:id="TabLesson" styleClass="tabs" text="Lessons">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="565.0">
                      <children>
@@ -179,7 +179,7 @@
                                           <Image url="@Images/Food-Types.png" />
                                        </image>
                                     </ImageView>
-                                    <Label fx:id="LessonLabel" text="Food Types" />
+                                    <Label fx:id="LessonLabel" style="-fx-font-family: Roboto;" text="Food Types" />
                                  </children>
                                  <padding>
                                     <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
@@ -191,7 +191,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Groceries">
+            <Tab styleClass="tabs" text="Groceries">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -241,7 +241,7 @@
                      </children></AnchorPane>
               </content>
             </Tab>
-          <Tab fx:id="TabInspiration" text="Inspiration">
+          <Tab fx:id="TabInspiration" styleClass="tabs" text="Inspiration">
                <content>
                   <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
                      <children>

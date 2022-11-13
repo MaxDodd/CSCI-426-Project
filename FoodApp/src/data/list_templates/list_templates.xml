@@ -1,0 +1,37 @@
+<root>
+    <templates>
+        <northAmerican>
+            <name>North American Staples</name>
+            <item>Bread</item>
+            <item>Butter</item>
+            <item>Cheese</item>
+            <item>Cold Cuts</item>
+            <item>Eggs</item>
+            <item>Garlic</item>
+            <item>Milk</item>
+            <item>Onions</item>
+            <item>Potatoes</item>
+            <item>Vegetable Oil</item>
+        </northAmerican>
+
+        <chinese>
+            <name>Chinese Staples</name>
+            <item>Broccoli</item>
+            <item>Carrots</item>
+            <item>CornStarch</item>
+            <item>Eggs</item>
+            <item>Garlic</item>
+            <item>Green Onions</item>
+            <item>Hoisin Sauce</item>
+            <item>Noodles</item>
+            <item>Oyster Sauce</item>
+            <item>Peanut Oil</item>
+            <item>Rise</item>
+            <item>Rice Vinegar</item>
+            <item>Soy Sauce</item>
+            <item>Toasted Sesame Oil</item>
+            <item>Tofu</item>
+        </chinese>
+    </templates>
+    
+</root>
