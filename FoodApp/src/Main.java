@@ -40,12 +40,10 @@ public class Main extends Application {
         ArrayList<String> names = new ArrayList<String>();
 
         names = p.getTemplateNames();
+        c.templateSetUp();
 
         for (int i = 0; i < names.size(); i++){
-            if (i == 1){
-                //Don't need to make a new template icon
-                c.setTemplateTitle(i,names.get(i));
-            }
+            c.addTemplate(names.get(i));
         }
 
     }

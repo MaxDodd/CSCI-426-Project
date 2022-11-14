@@ -79,12 +79,13 @@ public class XMLParser {
 
     private String getName(Node n){
         NodeList children = n.getChildNodes();
+        Node child;
         for (int i = 0; i < children.getLength(); i++){
-            if (children.item(i).getNodeType() == Node.ELEMENT_NODE){
+            child = children.item(i);
+            if (child.getNodeType() == Node.ELEMENT_NODE){
                 //WHY IS THIS NOT GETTING THE NAME??
-                if (children.item(i).getNodeName() == "name"){
-                    System.out.println(children.item(i).getNodeValue());
-                    return  children.item(i).getNodeValue();
+                if (child.getNodeName().equals("name") ){
+                    return  child.getTextContent();
                 }
             }
         }

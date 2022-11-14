@@ -11,7 +11,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.util.ArrayList;
+import java.util.Hashtable;
+
 public class Controller {
+
+    Hashtable<String, VBox> templateVboxes;
 
     @FXML
     private ImageView GroceriesAddImage;
@@ -153,9 +158,18 @@ public class Controller {
         Tabs.toFront();
     }
 
-    public void setTemplateTitle(int index, String s){
-        if(index == 1){
-            GroceriesTemplateLabel.setText(s);
+
+    public void templateSetUp(){
+        //Adds the create template Vbox too the list
+        templateVboxes.put("create", GroceriesAddTemplateVBox);
+    }
+
+    public void addTemplate(String name){
+        //Add a template with name 'name'
+        if (!templateVboxes.containsKey(name)){
+            //Trying to clone the create template so you can modularly add templates
+            GroceriesTemplateVbox.
+            templateVboxes.put(name, )
         }
     }
 
