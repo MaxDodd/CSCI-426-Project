@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GroceriesTemplate.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/inspirations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lesson_meal_prep.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/lesson_shopping.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/list_templates/Chinese.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/list_templates/Staples.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FoodApp/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FoodApp/XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/FoodAppStyleSheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/FoodAppStyleSheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FoodAppUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FoodAppUI.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/list_templates/list_templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/list_templates/list_templates.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,45 +243,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="760" y="371" key="FileChooserDialogImpl/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666469694165" />
-    <state width="1037" height="682" key="GridCell.Tab.0.bottom" timestamp="1668451106231">
+    <state width="1037" height="682" key="GridCell.Tab.0.bottom" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451106231" />
+    <state width="1037" height="682" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1877" height="246" key="GridCell.Tab.0.bottom/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
-    <state width="1037" height="682" key="GridCell.Tab.0.center" timestamp="1668451106231">
+    <state width="1037" height="682" key="GridCell.Tab.0.center" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451106231" />
+    <state width="1037" height="682" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1877" height="246" key="GridCell.Tab.0.center/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
-    <state width="1037" height="682" key="GridCell.Tab.0.left" timestamp="1668451106231">
+    <state width="1037" height="682" key="GridCell.Tab.0.left" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451106231" />
+    <state width="1037" height="682" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1877" height="246" key="GridCell.Tab.0.left/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
-    <state width="1037" height="682" key="GridCell.Tab.0.right" timestamp="1668451106231">
+    <state width="1037" height="682" key="GridCell.Tab.0.right" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451106231" />
+    <state width="1037" height="682" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1877" height="246" key="GridCell.Tab.0.right/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1667850012183" />
-    <state width="1037" height="682" key="GridCell.Tab.1.bottom" timestamp="1668451108783">
+    <state width="1037" height="682" key="GridCell.Tab.1.bottom" timestamp="1668750015882">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.1.bottom/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451108783" />
+    <state width="1037" height="682" key="GridCell.Tab.1.bottom/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015882" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666469186583" />
-    <state width="1037" height="682" key="GridCell.Tab.1.center" timestamp="1668451108783">
+    <state width="1037" height="682" key="GridCell.Tab.1.center" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.1.center/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451108783" />
+    <state width="1037" height="682" key="GridCell.Tab.1.center/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1860" height="344" key="GridCell.Tab.1.center/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666469186583" />
-    <state width="1037" height="682" key="GridCell.Tab.1.left" timestamp="1668451108783">
+    <state width="1037" height="682" key="GridCell.Tab.1.left" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.1.left/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451108783" />
+    <state width="1037" height="682" key="GridCell.Tab.1.left/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1860" height="344" key="GridCell.Tab.1.left/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666469186582" />
-    <state width="1037" height="682" key="GridCell.Tab.1.right" timestamp="1668451108783">
+    <state width="1037" height="682" key="GridCell.Tab.1.right" timestamp="1668750015881">
       <screen x="-1080" y="-451" width="1080" height="1880" />
     </state>
-    <state width="1037" height="682" key="GridCell.Tab.1.right/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668451108783" />
+    <state width="1037" height="682" key="GridCell.Tab.1.right/-1080.-451.1080.1880/0.0.1920.1040@-1080.-451.1080.1880" timestamp="1668750015881" />
     <state width="1860" height="344" key="GridCell.Tab.1.right/-1080.-451.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1666469186583" />
     <state x="340" y="165" key="SettingsEditor" timestamp="1666469700344">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -309,8 +305,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/XMLParser.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="10" />
+          <line>106</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

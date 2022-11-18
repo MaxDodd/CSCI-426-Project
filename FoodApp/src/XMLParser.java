@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class XMLParser {
     final int NAME_INDEX = 0;
 
+
     private Document templatesDoc;
 
 
@@ -90,6 +91,41 @@ public class XMLParser {
             }
         }
         return "NA";
+    }
+
+    public ArrayList getItems(String name){
+        ArrayList<String> items = new ArrayList<String>();
+        Node template = null;
+        NodeList templateChildren = null;
+        String nameGotten;
+
+        //gets all the names
+        NodeList names = templatesDoc.getElementsByTagName("name");
+
+        //Get the Node of the right template based on the name given
+        for (int i = 0; i < names.getLength(); i++){
+            nameGotten = names.item(i).getTextContent();
+            if (nameGotten.equals(name)){
+                template = names.item(i).getParentNode();
+            }else{
+                System.out.println("template does not exist");
+            }
+        }
+
+        //with the parent Node of the template get the items
+        if (template != null){
+            templateChildren = template.getChildNodes();
+
+            for (int i = 0; i < templateChildren.getLength(); i ++){
+                if ((templateChildren.item(i).getNodeType() == Node.ELEMENT_NODE)
+                    && (templateChildren.item(i).getNodeName() != "name")){
+                    //Add item to list
+                    items.add(templateChildren.item(i).getTextContent());
+                }
+            }
+        }
+
+        return items;
     }
 
 }

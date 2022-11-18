@@ -18,9 +18,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="base-anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane id="base-anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F8E9E9;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <AnchorPane fx:id="MealInfoAnchorPane" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="MealInfoAnchorPane" prefHeight="800.0" prefWidth="1200.0" styleClass="root" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane fx:id="MealPopUpAnchorPane" layoutX="254.0" layoutY="142.0" prefHeight="516.0" prefWidth="693.0">
                <children>
@@ -127,17 +127,17 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="TemplateBaseAnchorPane" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane id="tabs" fx:id="TemplateBaseAnchorPane" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="TemplatePopUpAnchorPane" layoutX="254.0" layoutY="142.0" prefHeight="516.0" prefWidth="693.0">
+            <AnchorPane fx:id="TemplatePopUpAnchorPane" layoutX="266.0" layoutY="142.0" prefHeight="516.0" prefWidth="669.0">
                <children>
-                  <VBox prefHeight="516.0" prefWidth="693.0" style="-fx-background-color: green;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <VBox prefHeight="516.0" prefWidth="693.0" style="-fx-background-color: #31E981; -fx-border-color: Black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Label fx:id="TemplateTitleLabel" text="Template 1" textAlignment="CENTER">
+                              <Label fx:id="TemplateTitleLabel" text="List 1" textAlignment="CENTER">
                                  <font>
-                                    <Font size="20.0" />
+                                    <Font name="Consolas Bold" size="20.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets />
@@ -145,10 +145,28 @@
                               </Label>
                            </children>
                         </HBox>
-                        <TextArea fx:id="TemplateTextArea">
+                        <HBox nodeOrientation="RIGHT_TO_LEFT">
+                           <children>
+                              <ImageView fx:id="editImage" fitHeight="50.0" fitWidth="50.0" onMouseReleased="#editClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/Edit.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TextArea fx:id="TemplateTextArea" editable="false" prefHeight="337.0" prefWidth="653.0" style="-fx-background-color: black;" text="test" wrapText="true">
                            <VBox.margin>
                               <Insets bottom="20.0" left="20.0" right="20.0" />
                            </VBox.margin>
+                           <font>
+                              <Font name="Consolas" size="15.0" />
+                           </font>
                         </TextArea>
                      </children>
                   </VBox>
@@ -161,9 +179,9 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <TabPane fx:id="Tabs" layoutX="-1.0" layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white;" stylesheets="@CSS/FoodAppStyleSheet.css" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="Tabs" layoutX="-1.0" layoutY="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #F8E9E9;" stylesheets="@CSS/FoodAppStyleSheet.css" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab fx:id="TabLesson" styleClass="tabs" text="Lessons">
+          <Tab fx:id="TabLesson" style="-fx-background-color: #31E981; -fx-border-color: Black;" styleClass="tabs" text="Lessons">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="565.0">
                      <children>
@@ -179,7 +197,10 @@
                                           <Image url="@Images/Food-Types.png" />
                                        </image>
                                     </ImageView>
-                                    <Label fx:id="LessonLabel" style="-fx-font-family: Roboto;" text="Food Types" />
+                                    <Label fx:id="LessonLabel" text="Food Types">
+                                       <font>
+                                          <Font name="Consolas" size="20.0" />
+                                       </font></Label>
                                  </children>
                                  <padding>
                                     <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
@@ -191,15 +212,35 @@
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab styleClass="tabs" text="Groceries">
+            <Tab style="-fx-background-color: #31E981; -fx-border-color: Black;" styleClass="tabs" text="Grocery Lists">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <TilePane layoutX="379.0" layoutY="186.0" prefHeight="771.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <VBox fx:id="GroceriesTemplateVbox" alignment="CENTER">
+                              <VBox fx:id="CreateTemplateVBox" alignment="CENTER">
                                  <children>
-                                    <ImageView fx:id="GroceriesTemplateImage" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageMouseRelease" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="GroceriesCreateImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Add-Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesCreateLabel" text="Create List">
+                                       <font>
+                                          <Font name="Consolas" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
                                        </VBox.margin>
@@ -209,7 +250,7 @@
                                     </ImageView>
                                     <Label fx:id="GroceriesTemplateLabel" text="Template 1">
                                        <font>
-                                          <Font size="15.0" />
+                                          <Font name="Consolas Bold" size="15.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -217,19 +258,159 @@
                                     <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
                                  </padding>
                               </VBox>
-                              <VBox fx:id="GroceriesAddTemplateVBox" alignment="CENTER">
+                              <VBox fx:id="TemplateVbox1" alignment="CENTER" disable="true" visible="false">
                                  <children>
-                                    <ImageView fx:id="GroceriesAddImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="GroceriesTemplateImage1" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
                                        <VBox.margin>
                                           <Insets bottom="10.0" />
                                        </VBox.margin>
                                        <image>
-                                          <Image url="@Images/Add-Template.png" />
+                                          <Image url="@Images/Template.png" />
                                        </image>
                                     </ImageView>
-                                    <Label fx:id="GroceriesAddLabel" text="Food Types">
+                                    <Label fx:id="GroceriesTemplateLabel1" text="Template 1">
                                        <font>
-                                          <Font size="15.0" />
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox2" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage2" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel2" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox3" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage3" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel3" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox4" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage4" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel4" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox5" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage5" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel5" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox6" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage6" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel6" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox7" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage7" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel7" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox fx:id="TemplateVbox8" alignment="CENTER" disable="true" visible="false">
+                                 <children>
+                                    <ImageView fx:id="GroceriesTemplateImage8" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#TemplateImageClicked" pickOnBounds="true" preserveRatio="true">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <image>
+                                          <Image url="@Images/Template.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="GroceriesTemplateLabel8" text="Template 1">
+                                       <font>
+                                          <Font name="Consolas Bold" size="15.0" />
                                        </font>
                                     </Label>
                                  </children>
@@ -241,44 +422,29 @@
                      </children></AnchorPane>
               </content>
             </Tab>
-          <Tab fx:id="TabInspiration" styleClass="tabs" text="Inspiration">
+          <Tab fx:id="TabInspiration" style="-fx-background-color: #31E981; -fx-border-color: Black;" styleClass="tabs" text="Meal Inspiration">
                <content>
                   <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ScrollPane prefHeight="771.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <content>
-                              <VBox alignment="CENTER">
+                        <HBox alignment="CENTER" prefHeight="751.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="CENTER" style="-fx-background-color: #F8E9E9;">
                                  <children>
-                                    <Label text="What Are You Looking For?">
+                                    <Label text="What Meals Are You Looking For?">
                                        <font>
-                                          <Font size="40.0" />
+                                          <Font name="Consolas Bold" size="40.0" />
                                        </font>
                                     </Label>
                                     <TilePane alignment="TOP_CENTER" hgap="20.0" prefHeight="148.0" prefWidth="480.0" vgap="20.0">
                                        <children>
                                           <CheckBox fx:id="InspTypeCheckBox" mnemonicParsing="false" text="Quick">
                                              <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                          </CheckBox>
-                                          <CheckBox mnemonicParsing="false" text="Breakfast">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                          </CheckBox>
-                                          <CheckBox mnemonicParsing="false" text="Lunch">
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                          </CheckBox>
-                                          <CheckBox mnemonicParsing="false" text="Dinner">
-                                             <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </CheckBox>
                                           <CheckBox mnemonicParsing="false" text="Snack">
                                              <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </CheckBox>
                                        </children>
@@ -291,45 +457,45 @@
                                     </TilePane>
                                     <Label text="Includes...">
                                        <font>
-                                          <Font size="30.0" />
+                                          <Font name="Consolas" size="30.0" />
                                        </font>
                                     </Label>
                                     <Accordion prefWidth="650.0">
                                        <panes>
                                           <TitledPane animated="false" text="Proteins">
                                              <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #F8E9E9;">
                                                    <children>
                                                       <TilePane hgap="20.0" layoutX="14.0" layoutY="-35.0" prefHeight="130.0" prefWidth="478.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                          <children>
                                                             <CheckBox fx:id="InspProtCheckBox" mnemonicParsing="false" text="Beef">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Chicken">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Eggs">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Fish">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Pork">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Turkey">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                          </children>
@@ -338,10 +504,10 @@
                                                 </AnchorPane>
                                              </content>
                                              <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </TitledPane>
-                                          <TitledPane animated="false" text="Vegetables">
+                                          <TitledPane animated="false" style="-fx-background-color: #31E981;" text="Vegetables">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0">
                                                    <children>
@@ -349,42 +515,42 @@
                                                          <children>
                                                             <CheckBox fx:id="InspVegCheckBox" mnemonicParsing="false" text="Broccoli">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Carrots">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Corn">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Lettuce">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Mushrooms">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Peas">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Spinach">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                             <CheckBox mnemonicParsing="false" text="Tomato">
                                                                <font>
-                                                                  <Font size="20.0" />
+                                                                  <Font name="Consolas" size="20.0" />
                                                                </font>
                                                             </CheckBox>
                                                          </children>
@@ -393,63 +559,66 @@
                                                 </AnchorPane>
                                              </content>
                                              <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </TitledPane>
-                                          <TitledPane animated="false" prefHeight="206.0" prefWidth="316.0" text="Grains">
+                                          <TitledPane animated="false" prefHeight="206.0" prefWidth="316.0" style="-fx-background-color: #31E981;" text="Grains">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
                                                       <TilePane layoutX="29.0" layoutY="-7.0" prefHeight="161.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <CheckBox fx:id="InspGrainCheckBox" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Rice">
                                                          <font>
-                                                            <Font size="20.0" />
+                                                            <Font name="Consolas" size="20.0" />
                                                          </font>
                                                       </CheckBox>
-                                                   </children></AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
                                              </content>
                                              <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </TitledPane>
-                                          <TitledPane animated="false" text="Dairy">
+                                          <TitledPane animated="false" style="-fx-background-color: #31E981;" text="Dairy">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
                                                       <TilePane layoutX="73.0" layoutY="44.0" prefHeight="180.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <CheckBox fx:id="InspDairyCheckBox1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Chedder">
                                                          <font>
-                                                            <Font size="20.0" />
+                                                            <Font name="Consolas" size="20.0" />
                                                          </font>
                                                       </CheckBox>
-                                                   </children></AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
                                              </content>
                                              <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </TitledPane>
-                                          <TitledPane animated="false" text="Spices">
+                                          <TitledPane animated="false" style="-fx-background-color: #31E981;" text="Spices">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
                                                       <TilePane layoutX="14.0" layoutY="-27.0" prefHeight="180.0" prefWidth="648.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <CheckBox fx:id="InspSpiceCheckBox" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Paprika">
                                                          <font>
-                                                            <Font size="20.0" />
+                                                            <Font name="Consolas" size="20.0" />
                                                          </font>
                                                       </CheckBox>
-                                                   </children></AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
                                              </content>
                                              <font>
-                                                <Font size="20.0" />
+                                                <Font name="Consolas" size="20.0" />
                                              </font>
                                           </TitledPane>
                                        </panes>
                                     </Accordion>
                                  </children>
                               </VBox>
-                           </content>
-                        </ScrollPane>
+                           </children>
+                        </HBox>
                         <ImageView fx:id="InspSearchImageView" fitHeight="100.0" fitWidth="100.0" onMouseReleased="#InspSearchClickReleased" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                            <image>
                               <Image url="@Images/search.png" />

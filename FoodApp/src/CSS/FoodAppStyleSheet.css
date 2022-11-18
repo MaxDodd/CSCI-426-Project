@@ -1,12 +1,29 @@
-@font-face{
-    font-family:'Roboto';
-    src: url ('Fonts/Roboto-Black.ttf')
-}
 
 .tabs {
     -fx-font-size: 20px;
     -fx-padding: 10px;
-    -fx-font-family: 'Roboto';
+    -fx-font-family: "Consolas";
 }
+
+.text-area .content{
+    -fx-background-color: #F8E9E9;
+}
+
+.inspiration-background{
+    -fx-background-color: #F8E9E9;
+
+}
+
+.titled-pane .title{
+    -fx-background-color: #31E981 ;
+    -fx-border-color: "black";
+}
+
+.check-box .box{
+    -fx-background-color: #31E981;
+    -fx-border-color: "black";
+}
+
+
 
 

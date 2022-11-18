@@ -1,7 +1,7 @@
 <root>
     <templates>
         <northAmerican>
-            <name>North American Staples</name>
+            <name>US Staples</name>
             <item>Bread</item>
             <item>Butter</item>
             <item>Cheese</item>
