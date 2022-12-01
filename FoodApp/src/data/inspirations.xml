@@ -9,7 +9,7 @@
 			<tag>brunch</tag>
 			<tag>side-dish</tag>
 			<tag>snack</tag>
-			<tag>desert</tag>
+			<tag>dessert</tag>
 		</category>
 		<category>
 			<name>Convenience</name>
@@ -31,6 +31,12 @@
 			<tag>grill</tag>
 		</category>
 	</tagGroups>
+	<foodCategories>
+		<proteins>Beef Chicken Eggs Fish Pork Turkey</proteins>
+		<vegetables>Broccoli Carrots Corn Lettuce Mushroom Peas Spinach Tomato Potato</vegetables>
+		<grains>Rice Oatmeal Pasta Noodles</grains>
+		<dairy>Milk Cheese</dairy>
+	</foodCategories>
 	<foodlist>
 		<item>
 			<name>Ragu</name>
@@ -38,13 +44,16 @@
 			Tips:
 			Add milk, parmesan cheese, and/or white wine vinegar to the sauce to improve flavor</desc>
 			<img></img>
+			<ingredients>
+				milk parmesan pasta
+			</ingredients>
 			<tags>
 				dinner easy stove
 			</tags>
 			<skills>
 				
 			</skills>
-		<item>
+		</item>
 		<item>
 			<name>Fried Rice</name>
 			<desc>A very versatile dish that you can make from nearly anything. Just sautee your choice of proteins and veggies and add rice, soy sauce, and scrambled egg.
@@ -52,13 +61,16 @@
 			If adding chicken, go for chicken thighs as opposed to breast meat. Breast meat is more expensive and too dry for this style of cuisine.
 			Prepare the rice a day before cooking and let it dry out in the fridge. Fried rice is traditionally prepared as a way to salvage stale rice, and actually tastes better that way!</desc>
 			<img></img>
+			<ingredients>
+				Rice vegetables proteins
+			</ingredients>
 			<tags>
 				dinner cheap stove vegetarian gluten-free
 			</tags>
 			<skills>
 				
 			</skills>
-		<item>
+		</item>
 		<item>
 			<name>Roast Potatoes</name>
 			<desc>A great side dish for any meal, but especially when there is a meaty main course. Leftovers also go great with eggs and cheese for breakfast. Chop your potatoes, roll them in oil and salt, then bake at high heat until they look golden!
@@ -66,25 +78,31 @@
 			For crunchier potatoes, boil them briefly before baking, just enough that the surface starts to be mushy. You can even just microwave them if you're in a rush.
 			Add garlic and herbs toward the end of the baking time to improve the flavor. Adding them too early will just cause them to burn.</desc>
 			<img></img>
+			<ingredients>
+				potatoes
+			</ingredients>
 			<tags>
 				side-dish easy cheap vegetarian vegan gluten-free oven
 			</tags>
 			<skills>
 				
 			</skills>
-		<item>
+		</item>
 		<item>
 			<name>Chicken Soup</name>
 			<desc>One of the most universal comfort foods there is. Just chicken, veggies, and optionally noodles all boiled in broth.
 			</desc>
 			<img></img>
+			<ingredients>
+				Chicken vegetables noodles
+			</ingredients>
 			<tags>
 				dinner easy quick cheap gluten-free stove
 			</tags>
 			<skills>
 				
 			</skills>
-		<item>
+		</item>
 		<item>
 			<name>Omelette</name>
 			<desc>A hearty breakfast that takes very little time to prepare.
@@ -92,12 +110,15 @@
 			When adding cheese to an omelette, do it at the very end. If cheese is left to sit in heat for too long it will start to turn oily.
 			</desc>
 			<img></img>
+			<ingredients>
+				eggs cheese
+			</ingredients>
 			<tags>
 				breakfast brunch easy quick cheap single-serving gluten-free vegetarian stove
 			</tags>
 			<skills>
 				
 			</skills>
-		<item>
+		</item>
 	</foodlist>
 </inspirations>

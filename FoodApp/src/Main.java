@@ -34,6 +34,7 @@ public class Main extends Application {
         primaryStage.show();
 
         setUpGroceries();
+        c.inspSetUp();
 
         c.getTabs().getSelectionModel().selectedItemProperty().addListener(
                 new ChangeListener<Tab>() {
