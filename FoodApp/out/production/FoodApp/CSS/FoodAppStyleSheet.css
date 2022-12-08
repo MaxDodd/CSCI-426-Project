@@ -1,8 +1,19 @@
 
+.button{
+    -fx-border-color: "black";
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-font-size: 15px;
+}
+
 .tabs {
     -fx-font-size: 20px;
     -fx-padding: 10px;
     -fx-font-family: "Consolas";
+}
+
+.groceryList {
+    -fx-font-size: 20px;
 }
 
 .text-area .content{
@@ -21,6 +32,22 @@
 
 .check-box .box{
     -fx-background-color: #31E981;
+    -fx-border-color: "black"
+}
+
+
+.mealType .box{
+     -fx-background-color: "LightYellow";
+     -fx-border-color: "black";
+ }
+
+.tag .box{
+    -fx-background-color: "Aquamarine";
+    -fx-border-color: "black";
+}
+
+.restriction .box{
+    -fx-background-color: "LightCoral";
     -fx-border-color: "black";
 }
 
@@ -37,9 +64,25 @@
     -fx-font-size: 20px;
 }
 
-.results .img{
-    width: 200px;
-    height: 200px;
+.img{
+    -fx-border-radius:5px;
+}
+
+.searchedTag{
+    -fx-background-color: "Aquamarine";
+
+}
+
+.searchedMealType{
+    -fx-background-color: "LightYellow";
+}
+
+.searchedRestriction{
+    -fx-background-color: "LightCoral";
+}
+
+.searchedIngred{
+    -fx-background-color: #31E981;
 }
 
 

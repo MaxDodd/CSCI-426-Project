@@ -3,16 +3,17 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.TilePane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import org.w3c.dom.NodeList;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
@@ -25,6 +26,7 @@ public class Controller {
     private ArrayList<VBox> templates = new ArrayList<VBox>();
     private XMLParser p;
     private InspParser ip;
+    private Boolean templateEditable = false;
 
     @FXML
     private ImageView GroceriesTemplateImage;
@@ -221,6 +223,9 @@ public class Controller {
     private TilePane ConveniencePane;
 
     @FXML
+    private VBox inspirationVbox;
+
+    @FXML
     private TilePane MealTypePane;
 
     @FXML
@@ -282,56 +287,193 @@ public class Controller {
 
 
     @FXML
-    void InspSearchClickReleased(MouseEvent event) {
+    void InspSearchClickReleased(MouseEvent event) throws FileNotFoundException {
 
         //index 0 is the included and index 1 is the exlcuded
-        ArrayList[] tagsSearched;
 
         ArrayList<Meal> mealsFound = new ArrayList<Meal>();
         ArrayList<String> searchedIngredients = new ArrayList<String>();
 
         searchedIngredients = getIngredientsChecked();
-        tagsSearched = getTagsSearched();
+        ArrayList<String> searchedMealType = getSearchedMealType();
+        ArrayList<String> searchedConvenience = getSearchedConvenience();
+        ArrayList<String> searchedRestrictions = getSearchedRestrictions();
 
-        mealsFound = ip.search(searchedIngredients, tagsSearched[0], tagsSearched[1]);
+        mealsFound = ip.search(searchedIngredients, searchedMealType, searchedConvenience, searchedRestrictions );
 
         //Display the results on the results page
-        loadResults(mealsFound, searchedIngredients, tagsSearched[0], tagsSearched[1]);
+        loadResults(mealsFound, searchedIngredients, searchedMealType, searchedConvenience, searchedRestrictions);
 
 
         InspResultsAnchorPane.toFront();
     }
 
-    private void loadResults(ArrayList<Meal> mealsFound, ArrayList<String> searchedIng, ArrayList<String> includeTags,
-                             ArrayList<String> excludeTags){
-        //tagsSearchedButtons.add(TagOneButton);
+    private void loadResults(ArrayList<Meal> mealsFound, ArrayList<String> searchedIng, ArrayList<String> searchedMealType,
+                             ArrayList<String> seachedConvenience, ArrayList<String> excludeTags) throws FileNotFoundException {
+
+        ResultsVbox.getChildren().clear();
+        ResultsTagsTilePane.getChildren().clear();
+
 
         //display tags
-        for (int i = 0; i < includeTags.size(); i++){
-            tagsSearchedButtons.add(new Button());
-            tagsSearchedButtons.get(i).setText(includeTags.get(i));
-            ResultsTagsTilePane.getChildren().add(tagsSearchedButtons.get(i));
-            tagsSearchedButtons.get(i).setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent actionEvent) {
-                    Button b;
-                    TilePane tp;
-                    b = (Button) actionEvent.getSource();
-                    tp = (TilePane) b.getParent();
-                    tp.getChildren().remove(b);
-                }
-            });
-        }
+        addMealTypeButtons(searchedMealType);
+        addConvButtons(seachedConvenience);
+        addRestButtons(excludeTags);
 
         //display results
         for (int i = 0; i < mealsFound.size(); i++){
             displayMeal(mealsFound.get(i));
         }
         //Create new item
-
     }
 
-    private void displayMeal(Meal m){
+    //I know that I could write the next three methods with a lot less copy and pasting but I don't have the time
+    //to think about how to do it. I promise I won't do this on the job : )
+
+    private void addRestButtons(ArrayList<String> restrictions){
+        int prevSize = tagsSearchedButtons.size();
+        for (int i = prevSize; i < (restrictions.size() + prevSize); i++) {
+            tagsSearchedButtons.add(new Button());
+            tagsSearchedButtons.get(i).getStyleClass().add("searchedRestriction");
+            tagsSearchedButtons.get(i).setText(restrictions.get(i - prevSize));
+            ResultsTagsTilePane.getChildren().add(tagsSearchedButtons.get(i));
+            tagsSearchedButtons.get(i).setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+                    //I know this is very bad practice but I know that it will work for now
+
+                    ArrayList<String> newIngred;
+                    ArrayList<String> newMealType;
+                    ArrayList<String> newConv;
+                    ArrayList<String> newRest;
+                    ArrayList<Meal> mealsFound;
+
+                    //Get the button then remove it
+                    Button b;
+                    TilePane tp;
+                    b = (Button) actionEvent.getSource();
+                    tp = (TilePane) b.getParent();
+                    tp.getChildren().remove(b);
+
+                    //Get the list of restrictions then remove the one that you want to delete
+                    newRest = getSearchedRestrictions();
+                    newRest.remove(b.getText().toLowerCase());
+                    uncheckByName(inspirationVbox, b.getText());
+
+                    //get the rest of the filters
+                    newIngred = getIngredientsChecked();
+                    newMealType = getSearchedMealType();
+                    newConv = getSearchedConvenience();
+
+                    //Search and load the meals
+                    mealsFound = ip.search(newIngred, newMealType,newConv,newRest);
+
+                    try {
+                        loadResults(mealsFound, newIngred, newMealType, newConv, newRest);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+    }
+
+    private void addMealTypeButtons(ArrayList<String> mealTypes){
+        int prevSize = tagsSearchedButtons.size();
+        for (int i = prevSize; i < (mealTypes.size() + prevSize); i++) {
+            tagsSearchedButtons.add(new Button());
+            tagsSearchedButtons.get(i).getStyleClass().add("searchedMealType");
+            tagsSearchedButtons.get(i).setText(mealTypes.get(i - prevSize));
+            ResultsTagsTilePane.getChildren().add(tagsSearchedButtons.get(i));
+            tagsSearchedButtons.get(i).setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+
+                    //Same as above
+                    ArrayList<String> newIngred;
+                    ArrayList<String> newMealType;
+                    ArrayList<String> newConv;
+                    ArrayList<String> newRest;
+                    ArrayList<Meal> mealsFound;
+
+                    Button b;
+                    TilePane tp;
+                    b = (Button) actionEvent.getSource();
+                    tp = (TilePane) b.getParent();
+                    tp.getChildren().remove(b);
+
+                    newRest = getSearchedRestrictions();
+                    newIngred = getIngredientsChecked();
+                    newConv = getSearchedConvenience();
+
+                    newMealType = getSearchedMealType();
+                    newMealType.remove(b.getText());
+                    uncheckByName(inspirationVbox, b.getText());
+
+
+
+                    mealsFound = ip.search(newIngred, newMealType,newConv,newRest);
+
+                    try {
+                        loadResults(mealsFound, newIngred, newMealType, newConv, newRest);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+    }
+
+    private void addConvButtons(ArrayList<String> includeTags){
+        int prevSize = tagsSearchedButtons.size();
+        for (int i = prevSize; i < (includeTags.size() + prevSize); i++) {
+            tagsSearchedButtons.add(new Button());
+            tagsSearchedButtons.get(i).getStyleClass().add("searchedTag");
+            tagsSearchedButtons.get(i).setText(includeTags.get(i - prevSize));
+            ResultsTagsTilePane.getChildren().add(tagsSearchedButtons.get(i));
+            tagsSearchedButtons.get(i).setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent actionEvent) {
+
+                    //Same as above
+                    ArrayList<String> newIngred;
+                    ArrayList<String> newMealType;
+                    ArrayList<String> newConv;
+                    ArrayList<String> newRest;
+                    ArrayList<Meal> mealsFound;
+
+                    Button b;
+                    TilePane tp;
+                    b = (Button) actionEvent.getSource();
+                    tp = (TilePane) b.getParent();
+                    tp.getChildren().remove(b);
+
+                    newRest = getSearchedRestrictions();
+                    newIngred = getIngredientsChecked();
+                    newMealType = getSearchedMealType();
+
+                    newConv = getSearchedConvenience();
+                    newConv.remove(b.getText());
+                    uncheckByName(inspirationVbox, b.getText());
+
+                    mealsFound = ip.search(newIngred, newMealType,newConv,newRest);
+
+                    try {
+                        loadResults(mealsFound, newIngred, newMealType, newConv, newRest);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+    }
+
+
+    private void displayMeal(Meal m) throws FileNotFoundException {
+
+
+
+
         HBox mealHbox = new HBox();
         mealHbox.getStyleClass().add("results");
 
@@ -343,20 +485,27 @@ public class Controller {
         Label mealName = new Label();
         mealName.getStyleClass().add("title");
 
-        Label mealDesc = new Label();
-        mealDesc.getStyleClass().add("desc");
-
-
+        //Label mealDesc = new Label();
+        //mealDesc.getStyleClass().add("desc");
 
         mealName.setText(m.getName());
-        mealDesc.setText(m.getDesc());
-        mealImage.setImage(mealImage.getImage());
+        //mealDesc.setText(m.getDesc());
+
+        if (m.getImg() != ""){
+            InputStream stream = new FileInputStream(m.getImg());
+            Image image = new Image(stream);
+            mealImage.setImage(image);
+            mealImage.setStyle("-fx-border-radius: 20px;");
+        }
+        mealImage.setFitWidth(100);
+        mealImage.setFitHeight(100);
+
 
         mealHbox.getChildren().add(mealImage);
         mealHbox.getChildren().add(wordsVbox);
 
         wordsVbox.getChildren().add(mealName);
-        wordsVbox.getChildren().add(mealDesc);
+        //wordsVbox.getChildren().add(mealDesc);
 
 
         ResultsVbox.getChildren().add(mealHbox);
@@ -370,6 +519,57 @@ public class Controller {
     @FXML
     void MealResultsBackMouseRelease(MouseEvent event) {
         Tabs.toFront();
+        uncheckBoxes(inspirationVbox);
+
+    }
+
+    private void uncheckBoxes(Node n){
+        boolean canHave = canHavChildren(n);
+
+        if (n.getClass().getName() == "javafx.scene.control.CheckBox"){
+            CheckBox cb = (CheckBox) n;
+            cb.setSelected(false);
+        }else if (!canHave || ((Parent) n).getChildrenUnmodifiable().size() <= 0){
+            return;
+        }else{
+            Parent p = (Parent) n;
+            ObservableList<Node> children = p.getChildrenUnmodifiable();
+
+            for (int i = 0; i < children.size(); i ++){
+                uncheckBoxes(children.get(i));
+            }
+        }
+    }
+
+    private void uncheckByName(Node n, String name){
+        boolean canHave = canHavChildren(n);
+
+        if ((n.getClass().getName() == "javafx.scene.control.CheckBox")){
+            CheckBox cb = (CheckBox) n;
+            if (cb.getText() == name){
+                cb.setSelected(false);
+            }
+            return;
+        }else if (!canHave || ((Parent) n).getChildrenUnmodifiable().size() <= 0){
+            return;
+        }else{
+            Parent p = (Parent) n;
+            ObservableList<Node> children = p.getChildrenUnmodifiable();
+
+            for (int i = 0; i < children.size(); i ++){
+                uncheckBoxes(children.get(i));
+            }
+        }
+    }
+
+    private boolean canHavChildren(Node n){
+        try{
+            Parent p = (Parent) n;
+            p.getChildrenUnmodifiable();
+            return true;
+        }catch (Exception e){
+            return false;
+        }
     }
 
     @FXML
@@ -378,8 +578,24 @@ public class Controller {
     }
 
     @FXML
-    void editClicked(MouseEvent event) {
-        TemplateTextArea.setEditable(true);
+    void editClicked(MouseEvent event) throws FileNotFoundException {
+        //if it is already editable
+        if(TemplateTextArea.editableProperty().get()){
+            //make it uneditable
+            TemplateTextArea.setEditable(false);
+            InputStream stream = new FileInputStream("C:\\Users\\Maxwell Dodd\\Documents\\CSCI 426\\CSCI-426-Project\\FoodApp\\src\\Images\\Edit.png");
+            Image image = new Image(stream);
+            editImage.setImage(image);
+        }else{
+            TemplateTextArea.setEditable(true);
+
+            InputStream stream = new FileInputStream("C:\\Users\\Maxwell Dodd\\Documents\\CSCI 426\\CSCI-426-Project\\FoodApp\\src\\Images\\Done.png");
+            Image image = new Image(stream);
+            editImage.setImage(image);
+        }
+
+
+
     }
 
     @FXML
@@ -401,7 +617,11 @@ public class Controller {
                 CheckBox cb = (CheckBox) ingredients.get(j);
                 if (cb.isSelected()){
                     System.out.println(cb.getText());
-                    ingredientsChecked.add(cb.getText());
+                    //add ingredient
+                    ingredientsChecked.add(cb.getText().toLowerCase());
+                    //add category
+                    ingredientsChecked.add(titledPane.getText().toLowerCase());
+
                 }
             }
         }
@@ -409,28 +629,17 @@ public class Controller {
         return ingredientsChecked;
     }
 
-    private ArrayList[] getTagsSearched(){
-        ArrayList[] results = {new ArrayList(),new ArrayList()};
 
-        ArrayList<String> included = new ArrayList<String>();
-        //get meal type tags
-        ArrayList<String> mealTypesChecked = new ArrayList<String>();
-        //get convenience tags
-        ArrayList<String> convenienceChecked = new ArrayList<>();
-        //get restriction tags
-        ArrayList<String> restrictionsChecked = new ArrayList<String>();
+    private ArrayList<String> getSearchedMealType(){
+        return getTagsByType(MealTypePane);
+    }
 
-        mealTypesChecked = getTagsByType(MealTypePane);
-        convenienceChecked = getTagsByType(ConveniencePane);
-        restrictionsChecked = getTagsByType(RestrictionsPane);
+    private  ArrayList<String> getSearchedConvenience(){
+        return getTagsByType(ConveniencePane);
+    }
 
-        included.addAll(mealTypesChecked);
-        included.addAll(convenienceChecked);
-
-        results[0] = included;
-        results[1] = restrictionsChecked;
-
-        return results;
+    private ArrayList<String> getSearchedRestrictions(){
+        return getTagsByType(RestrictionsPane);
     }
 
     private ArrayList<String> getTagsByType(TilePane tp){
@@ -443,7 +652,8 @@ public class Controller {
         for (int i = 0; i < tagCheckBoxes.size(); i++){
             cb = (CheckBox) tagCheckBoxes.get(i);
             if (cb.isSelected()){
-                tagsChecked.add(cb.getText());
+                System.out.println(cb.getText().toLowerCase());
+                tagsChecked.add(cb.getText().toLowerCase());
             }
         }
 

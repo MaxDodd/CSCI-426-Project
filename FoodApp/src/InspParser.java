@@ -35,13 +35,16 @@ public class InspParser {
 
     }
 
-    public ArrayList<Meal> search(ArrayList<String> searchedIngredients, ArrayList<String> includeTags, ArrayList<String> excludeTags){
+    public ArrayList<Meal> search(ArrayList<String> searchedIngredients, ArrayList<String> mealTypes,
+                                  ArrayList<String> convenienceTags, ArrayList<String> restrictions){
         Node meal;
         Node detail;
         NodeList mealDetailsList;
         NodeList meals = templatesDoc.getElementsByTagName("item");
+        ArrayList<String> searchedTags = new ArrayList<>();
         List<String> ingredientsInMeal;
-        List<String> tags;
+        List<String> tagsList;
+        ArrayList<Node> filteredMeals = new ArrayList<>();
         ArrayList<Meal> mealsInResults = new ArrayList<Meal>();
 
 
@@ -50,41 +53,71 @@ public class InspParser {
             meal = meals.item(i);
             mealDetailsList = meal.getChildNodes();
 
+            //filter out the meals that don't have the meal type or convenience of the meal type selected
+            for (int j = 0; j < mealDetailsList.getLength(); j++){
 
+                detail = mealDetailsList.item(j); //grab the jth detail of the meal
+
+                if (detail.getNodeName() == "tags"){
+                    //if that detail is the tags
+                    tagsList = Arrays.asList(detail.getTextContent().split(" "));
+                    tagsList = cleanStrings(tagsList);
+                    searchedTags.addAll(mealTypes);
+                    searchedTags.addAll(convenienceTags);
+
+                    //check if the meal has all the tags
+                    if (searchDetailTags(searchedTags, tagsList)){
+                        //if so add it to the filtered list
+                        filteredMeals.add(meal);
+                    }
+                }
+            }
+        }
+
+        //from the list of meals that have the tags: remove the meals that don't have any
+        //of the ingredients
+
+        //for each filtered meal
+        if (searchedIngredients.size() == 0){
+            Node filteredMeal;
+            Meal m;
+            for (int i = 0; i < filteredMeals.size(); i++){
+                m = new Meal(); //create meal object
+                filteredMeal = filteredMeals.get(i);
+                m.setName(getMealDetail(filteredMeal, "name"));
+                m.setDesc(getMealDetail(filteredMeal, "desc"));
+                m.setImg(getMealDetail(filteredMeal, "img"));
+                mealsInResults.add(m);
+            }
+        }
+        for (int i = 0; i < filteredMeals.size(); i ++){
+            Meal m = new Meal(); //create meal object
+            Node filteredMeal = filteredMeals.get(i);
+            mealDetailsList = filteredMeal.getChildNodes();
+            //for each detail
             for (int j = 0; j < mealDetailsList.getLength(); j ++){
-                //search the ingredients. if it includes any of the searched items then add it
                 detail = mealDetailsList.item(j);
-                Meal m = new Meal();
+                //check if it is the ingredient detail
                 if (detail.getNodeName() == "ingredients"){
-                    //see if any of the ingredients match
                     ingredientsInMeal = Arrays.asList(detail.getTextContent().split(" "));
                     ingredientsInMeal = cleanStrings(ingredientsInMeal);
-                    if (searchDetail(searchedIngredients, ingredientsInMeal)){
-                        //if any ingredients match
-                        m.setName(getMealChild(meal, "name"));
-                        m.setDesc(getMealChild(meal, "desc"));
-                        m.setImg(getMealChild(meal, "img"));
-                        mealsInResults.add(m);
-                    }
-                }else if (detail.getNodeName() == "tags"){
-                    //search the tags
-                    tags = Arrays.asList(detail.getTextContent().split(" "));
 
-                    if (searchDetail(includeTags, tags)){
-                        m.setName(getMealChild(meal, "name"));
-                        m.setDesc(getMealChild(meal, "desc"));
-                        m.setImg(getMealChild(meal, "img"));
+                    //check if it contains at least on of the ingredients searched
+                    if (searchDetailIngredients(searchedIngredients, ingredientsInMeal)){
+                        m.setName(getMealDetail(filteredMeal, "name"));
+                        m.setDesc(getMealDetail(filteredMeal, "desc"));
+                        m.setImg(getMealDetail(filteredMeal, "img"));
                         mealsInResults.add(m);
                     }
                 }
-
             }
         }
+
 
         return mealsInResults;
     }
 
-    private String getMealChild(Node meal, String nodeName){
+    private String getMealDetail(Node meal, String nodeName){
         NodeList children = meal.getChildNodes();
         for (int i = 0; i < children.getLength(); i++){
             if (children.item(i).getNodeName() == nodeName){
@@ -108,13 +141,23 @@ public class InspParser {
         return list;
     }
 
-    private boolean searchDetail(ArrayList<String> searchedDetailList, List<String> DetailList){
+    private boolean searchDetailIngredients(ArrayList<String> searchedDetailList, List<String> DetailList){
         for (int i = 0; i < searchedDetailList.size(); i ++){
             if (DetailList.contains(searchedDetailList.get(i))){
                 return true;
             }
         }
         return false;
+    }
+
+    private boolean searchDetailTags(ArrayList<String> searched, List<String> tagsList){
+        for (int i = 0; i < searched.size(); i ++){
+            if (!tagsList.contains(searched.get(i))){
+                return false;
+            }
+        }
+
+        return true;
     }
 
 }

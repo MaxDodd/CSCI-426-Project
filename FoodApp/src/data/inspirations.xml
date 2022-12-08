@@ -43,12 +43,12 @@
 			<desc>A classic pasta with meat sauce. Easy to make and very broadly appealing, it's the perfect dish for a family dinner. Store-bought pasta sauce works just fine here, but you can make your own if you want to go the extra mile.
 			Tips:
 			Add milk, parmesan cheese, and/or white wine vinegar to the sauce to improve flavor</desc>
-			<img></img>
+			<img>C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src\Images\Meals\Ragu.jpg</img>
 			<ingredients>
 				milk parmesan pasta
 			</ingredients>
 			<tags>
-				dinner easy stove
+				dinner easy stove quick
 			</tags>
 			<skills>
 				
@@ -60,12 +60,12 @@
 			Tips:
 			If adding chicken, go for chicken thighs as opposed to breast meat. Breast meat is more expensive and too dry for this style of cuisine.
 			Prepare the rice a day before cooking and let it dry out in the fridge. Fried rice is traditionally prepared as a way to salvage stale rice, and actually tastes better that way!</desc>
-			<img></img>
+			<img>C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src\Images\Meals\FriedRice.jpg</img>
 			<ingredients>
 				Rice vegetables proteins
 			</ingredients>
 			<tags>
-				dinner cheap stove vegetarian gluten-free
+				dinner cheap stove vegetarian gluten-free quick lunch
 			</tags>
 			<skills>
 				
@@ -77,7 +77,7 @@
 			Tips:
 			For crunchier potatoes, boil them briefly before baking, just enough that the surface starts to be mushy. You can even just microwave them if you're in a rush.
 			Add garlic and herbs toward the end of the baking time to improve the flavor. Adding them too early will just cause them to burn.</desc>
-			<img></img>
+			<img>C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src\Images\Meals\RoastPotatoes.jpg</img>
 			<ingredients>
 				potatoes
 			</ingredients>
@@ -92,12 +92,12 @@
 			<name>Chicken Soup</name>
 			<desc>One of the most universal comfort foods there is. Just chicken, veggies, and optionally noodles all boiled in broth.
 			</desc>
-			<img></img>
+			<img>C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src\Images\Meals\ChickenNoodleSoup.jpg</img>
 			<ingredients>
-				Chicken vegetables noodles
+				chicken vegetables noodles
 			</ingredients>
 			<tags>
-				dinner easy quick cheap gluten-free stove
+				dinner easy cheap gluten-free stove quick
 			</tags>
 			<skills>
 				
@@ -109,7 +109,7 @@
 			Tips:
 			When adding cheese to an omelette, do it at the very end. If cheese is left to sit in heat for too long it will start to turn oily.
 			</desc>
-			<img></img>
+			<img>C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src\Images\Meals\Omelette.jpg</img>
 			<ingredients>
 				eggs cheese
 			</ingredients>
@@ -117,7 +117,23 @@
 				breakfast brunch easy quick cheap single-serving gluten-free vegetarian stove
 			</tags>
 			<skills>
-				
+
+			</skills>
+		</item>
+		<item>
+			<name>Sandwich</name>
+			<desc>Vegetables, cheese, and meat, normally with a condiment, but you can really put whatever you want as long as it is between two slices of bread. Get as creative as you want and mix and match the ingredients to make something to your liking!
+				Great for left over meat!
+			</desc>
+			<img>C:\Users\Maxwell Dodd\Documents\CSCI 426\CSCI-426-Project\FoodApp\src\Images\Meals\Sandwich.jpg</img>
+			<ingredients>
+				proteins cheese vegetables
+			</ingredients>
+			<tags>
+				lunch quick easy vegan vegetarian lactose-free
+			</tags>
+			<skills>
+
 			</skills>
 		</item>
 	</foodlist>
